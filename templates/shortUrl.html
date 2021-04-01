@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{url_for('static',filename='images/icon.ico')}}">
+    <title>Url Shortner & QR Code Generator</title>
+    <script>
+        function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("URL : " + copyText.value+" "+"is copied to your Clipboard.");
+}
+    </script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+</head>
+<body>
+        <div class="ui container">
+            <div>
+                <h1 style="color:white;background-color: slategrey;" class="ui center aligned header">URL Shortner & QR Code Generator</h1>
+            </div>
+        <div style="background-color: slategrey;" class ="ui segment">
+            <form class="ui form">
+                <input type="text" value={{url}} id="myInput">
+                <br><br>
+                <!-- The button used to copy the text -->
+                <button onclick="myFunction()" class="ui primary button">Copy text 📋</button>
+                <button action="{{ url_for('index') }} " class="ui button">Back To Home</button> 
+    
+            </form>
+        </div>
+        <h3 style="color:black;" class="ui center aligned header">Below is the QR Code containing the Shortend URL.</h3>
+        <img class="ui centered medium image" src="{{ qrcode(url)}}">
+    </div>
+    
+</body>
+</html>

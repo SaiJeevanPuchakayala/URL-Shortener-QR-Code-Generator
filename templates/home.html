@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{url_for('static',filename='images/icon.ico')}}">
+    <title>Url Shortner & QR Code Generator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+</head>
+<body>
+    <div class="ui container">
+        <div>
+            <h1 style="color:white;background-color: slategrey;" class="ui center aligned header">URL Shortner & QR Code Generator</h1>
+        </div>
+
+        <div style="background-color: slategrey;" class ="ui segment">
+            <form action="{{ url_for('index') }}" method="POST" class="ui form">
+                <input autofocus type="text" name="url" placeholder="Paste Your Url Here...">
+                <br><br>
+                <input type="submit" value="Short Url ✂" class="ui primary button">
+                <input type="reset" value="Clear box" class="ui secondary button">
+            </form>
+        </div>
+        <h2>Flask-URL-Shortner & QR Code Generator</h2>
+        <h4>A simple Flask Url Shortner with converts a big url into a short url and also generates the QR Code of that URL.</h4>
+            
+            <h5>Modules Used :</h5>
+            <p>flask ( pip install flask )</p>
+            <p>pyshortners ( pip install pyshortner )</p>
+            <p>flask_qrcode ( pip install flask_qrcode )</p>
+            <h5>Features:</h5>
+            <p>★ Easily shorten any link</p>
+            <p>★ Easily copy url to clipboard</p>
+            <p>★ Shareable QR code</p>
+            <h3>Short links can be easily copied to your clipboard. QR codes are also created for all short links. Start using Url Shortener and QR Code Generator today!</h3>
+
+    </div>
+    
+</body>
+</html>
