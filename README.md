@@ -1,7 +1,7 @@
 # URL-Shortener-QR-Code-Generator
 A simple Flask Url Shortner with converts a big url into a short url and also generates the QR Code of that URL.
 
-This Web App is live at : (URL-Shortener-QR-Code-Generator)[https://urlshortener-qrcodegenerator.herokuapp.com/)]
+This Web App is live at : (URL-Shortener-QR-Code-Generator)[https://urlshortener-qrcodegenerator.herokuapp.com/]
 
 Modules Used :
 
